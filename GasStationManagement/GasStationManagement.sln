@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GasStationManagement", "GasStationManagement", "{10F2B844-CB04-40AF-A522-466366C9637E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasStationManagement", "GasStationManagement\GasStationManagement.csproj", "{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasStationManagement.Model", "GasStationManagement.Model\GasStationManagement.Model.csproj", "{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasStationManagement.View", "GasStationManagement.View\GasStationManagement.View.csproj", "{52CEEA8F-B059-4612-B20B-36FF3D768795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GasStationManagement.ViewModel", "GasStationManagement.ViewModel\GasStationManagement.ViewModel.csproj", "{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSS.Library", "MSS.Library", "{76146C01-7561-42A1-B67D-6F7179720821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSS.Library", "..\MSS.Library\MSS.Library\MSS.Library.csproj", "{5B5748B5-7246-443F-B5EF-8D2A34ABC134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSS.Library.Test", "..\MSS.Library\MSS.Library.Test\MSS.Library.Test.csproj", "{63D4F3C7-DD6C-446F-885D-7397A59FB5AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CEEA8F-B059-4612-B20B-36FF3D768795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CEEA8F-B059-4612-B20B-36FF3D768795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CEEA8F-B059-4612-B20B-36FF3D768795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CEEA8F-B059-4612-B20B-36FF3D768795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5748B5-7246-443F-B5EF-8D2A34ABC134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5748B5-7246-443F-B5EF-8D2A34ABC134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5748B5-7246-443F-B5EF-8D2A34ABC134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5748B5-7246-443F-B5EF-8D2A34ABC134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D4F3C7-DD6C-446F-885D-7397A59FB5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D4F3C7-DD6C-446F-885D-7397A59FB5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D4F3C7-DD6C-446F-885D-7397A59FB5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D4F3C7-DD6C-446F-885D-7397A59FB5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFA19412-909E-4B6B-BA01-AEAD1AB7BDE9} = {10F2B844-CB04-40AF-A522-466366C9637E}
+		{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C} = {10F2B844-CB04-40AF-A522-466366C9637E}
+		{52CEEA8F-B059-4612-B20B-36FF3D768795} = {10F2B844-CB04-40AF-A522-466366C9637E}
+		{46B2FA4A-0F9F-4532-AF2D-70960D6D1631} = {10F2B844-CB04-40AF-A522-466366C9637E}
+		{5B5748B5-7246-443F-B5EF-8D2A34ABC134} = {76146C01-7561-42A1-B67D-6F7179720821}
+		{63D4F3C7-DD6C-446F-885D-7397A59FB5AF} = {76146C01-7561-42A1-B67D-6F7179720821}
+	EndGlobalSection
+EndGlobal

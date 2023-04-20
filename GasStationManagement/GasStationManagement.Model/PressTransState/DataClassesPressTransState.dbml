@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesPressTransStateDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_PressTransState" Member="TBL_PressTransStates">
+    <Type Name="TBL_PressTransState">
+      <Column Name="PressTrans_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PressTransSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PressTransStateRow" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChangeStateDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentState_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Store_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="WorkShop_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Calibration_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GasStation_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_PressTransState" Member="VW_PressTransStates">
+    <Type Name="VW_PressTransState">
+      <Column Name="PressTrans_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PressTransSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PressTransStateRow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeStateDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentState_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentStateName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Store_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="StoreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkShop_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="WorkShopName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Calibration_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStation_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HMIState" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_PressTransStateDelete" Method="SP_PressTransStateDelete">
+    <Parameter Name="PressTrans_Id" Parameter="pressTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressTransSerialNo" Parameter="pressTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressTransStateRow" Parameter="pressTransStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressTransStateInsert" Method="SP_PressTransStateInsert">
+    <Parameter Name="PressTrans_Id" Parameter="pressTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressTransSerialNo" Parameter="pressTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressTransStateRow" Parameter="pressTransStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeStateDate" Parameter="changeStateDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EquipmentState_Id" Parameter="equipmentState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Store_Id" Parameter="store_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkShop_Id" Parameter="workShop_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Calibration_Id" Parameter="calibration_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressTransStateUpdate" Method="SP_PressTransStateUpdate">
+    <Parameter Name="PressTrans_Id" Parameter="pressTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressTransSerialNo" Parameter="pressTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressTransStateRow" Parameter="pressTransStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeStateDate" Parameter="changeStateDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EquipmentState_Id" Parameter="equipmentState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Store_Id" Parameter="store_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkShop_Id" Parameter="workShop_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Calibration_Id" Parameter="calibration_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

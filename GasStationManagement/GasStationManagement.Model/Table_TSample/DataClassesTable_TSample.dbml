@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesTable_TSampleDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VW_Table_TSample" Member="VW_Table_TSamples">
+    <Type Name="VW_Table_TSample">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="time_Stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="strTimeStampShamsi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="bInvalid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nStationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nProjectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fSysUpTime_Hour" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fStationCapacity" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fInGasT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutGasT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fInGasP" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutGasP" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fAirT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK2_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK3_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fInT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fInT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fWaterT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fWaterT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_TSample" Member="Table_TSamples">
+    <Type Name="Table_TSample">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="time_Stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="strTimeStampShamsi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="bInvalid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nStationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nProjectID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fSysUpTime_Hour" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fStationCapacity" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fInGasT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutGasT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fInGasP" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutGasP" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fAirT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK2_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK3_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fInT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fInT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fOutT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fWaterT_Ht2" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fWaterT_Ht1" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_Table_TSampleClear" Method="SP_Table_TSampleClear">
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Table_TInsertUpdate" Method="SP_Table_TInsertUpdate">
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="time_Stamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="strTimeStampShamsi" Type="System.String" DbType="NText" />
+    <Parameter Name="bInvalid" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="nProjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fSysUpTime_Hour" Type="System.Single" DbType="Real" />
+    <Parameter Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fStationCapacity" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fAirT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nVb" Parameter="eK1_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVbD" Parameter="eK1_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVm" Parameter="eK1_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVmD" Parameter="eK1_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_fP_Psi" Parameter="eK1_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fT" Parameter="eK1_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fC" Parameter="eK1_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQm" Parameter="eK1_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQb" Parameter="eK1_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fTbX" Parameter="eK1_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fPbX" Parameter="eK1_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nBatRemain" Parameter="eK1_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK2_nVb" Parameter="eK2_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVbD" Parameter="eK2_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVm" Parameter="eK2_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVmD" Parameter="eK2_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_fP_Psi" Parameter="eK2_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fT" Parameter="eK2_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fC" Parameter="eK2_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQm" Parameter="eK2_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQb" Parameter="eK2_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fTbX" Parameter="eK2_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fPbX" Parameter="eK2_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_nBatRemain" Parameter="eK2_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK3_nVb" Parameter="eK3_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVbD" Parameter="eK3_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVm" Parameter="eK3_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVmD" Parameter="eK3_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_fP_Psi" Parameter="eK3_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fT" Parameter="eK3_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fC" Parameter="eK3_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQm" Parameter="eK3_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQb" Parameter="eK3_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fTbX" Parameter="eK3_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fPbX" Parameter="eK3_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_nBatRemain" Parameter="eK3_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fInT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fInT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fWaterT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fWaterT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Table_TSampleDelete" Method="SP_Table_TSampleDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Table_TSampleInsert" Method="SP_Table_TSampleInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="GasStationName" Parameter="gasStationName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="time_Stamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="strTimeStampShamsi" Type="System.String" DbType="NText" />
+    <Parameter Name="bInvalid" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="nStationID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nProjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fSysUpTime_Hour" Type="System.Single" DbType="Real" />
+    <Parameter Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fStationCapacity" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fAirT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nVb" Parameter="eK1_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVbD" Parameter="eK1_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVm" Parameter="eK1_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVmD" Parameter="eK1_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_fP_Psi" Parameter="eK1_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fT" Parameter="eK1_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fC" Parameter="eK1_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQm" Parameter="eK1_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQb" Parameter="eK1_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fTbX" Parameter="eK1_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fPbX" Parameter="eK1_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nBatRemain" Parameter="eK1_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK2_nVb" Parameter="eK2_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVbD" Parameter="eK2_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVm" Parameter="eK2_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVmD" Parameter="eK2_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_fP_Psi" Parameter="eK2_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fT" Parameter="eK2_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fC" Parameter="eK2_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQm" Parameter="eK2_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQb" Parameter="eK2_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fTbX" Parameter="eK2_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fPbX" Parameter="eK2_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_nBatRemain" Parameter="eK2_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK3_nVb" Parameter="eK3_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVbD" Parameter="eK3_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVm" Parameter="eK3_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVmD" Parameter="eK3_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_fP_Psi" Parameter="eK3_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fT" Parameter="eK3_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fC" Parameter="eK3_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQm" Parameter="eK3_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQb" Parameter="eK3_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fTbX" Parameter="eK3_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fPbX" Parameter="eK3_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_nBatRemain" Parameter="eK3_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fInT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fInT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fWaterT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fWaterT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_Table_TSampleUpdate" Method="SP_Table_TSampleUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="GasStationName" Parameter="gasStationName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="time_Stamp" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="strTimeStampShamsi" Type="System.String" DbType="NText" />
+    <Parameter Name="bInvalid" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="nStationID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nProjectID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fSysUpTime_Hour" Type="System.Single" DbType="Real" />
+    <Parameter Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int" />
+    <Parameter Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fStationCapacity" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="fTotalQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasT" Type="System.Single" DbType="Real" />
+    <Parameter Name="fInGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutGasP" Type="System.Single" DbType="Real" />
+    <Parameter Name="fAirT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nVb" Parameter="eK1_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVbD" Parameter="eK1_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVm" Parameter="eK1_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_nVmD" Parameter="eK1_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK1_fP_Psi" Parameter="eK1_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fT" Parameter="eK1_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fC" Parameter="eK1_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQm" Parameter="eK1_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fQb" Parameter="eK1_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fTbX" Parameter="eK1_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_fPbX" Parameter="eK1_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK1_nBatRemain" Parameter="eK1_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK2_nVb" Parameter="eK2_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVbD" Parameter="eK2_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVm" Parameter="eK2_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_nVmD" Parameter="eK2_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK2_fP_Psi" Parameter="eK2_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fT" Parameter="eK2_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fC" Parameter="eK2_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQm" Parameter="eK2_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fQb" Parameter="eK2_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fTbX" Parameter="eK2_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_fPbX" Parameter="eK2_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK2_nBatRemain" Parameter="eK2_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EK3_nVb" Parameter="eK3_nVb" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVbD" Parameter="eK3_nVbD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVm" Parameter="eK3_nVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_nVmD" Parameter="eK3_nVmD" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EK3_fP_Psi" Parameter="eK3_fP_Psi" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fT" Parameter="eK3_fT" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fC" Parameter="eK3_fC" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQm" Parameter="eK3_fQm" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fQb" Parameter="eK3_fQb" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fTbX" Parameter="eK3_fTbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_fPbX" Parameter="eK3_fPbX" Type="System.Single" DbType="Real" />
+    <Parameter Name="EK3_nBatRemain" Parameter="eK3_nBatRemain" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fInT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fInT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fOutT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="fWaterT_Ht2" Type="System.Single" DbType="Real" />
+    <Parameter Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="fWaterT_Ht1" Type="System.Single" DbType="Real" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

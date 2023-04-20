@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesGasStations">
+  <DataContextMoniker Name="/DataClassesGasStationsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bdb9acdc-2661-4500-9683-33f3ae646439" absoluteBounds="0.875, 0.5, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/DataClassesGasStationsDataContext/GasStation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bebeae54-0354-4135-a522-0ecf49ea3430" absoluteBounds="0.89000000000000012, 0.96, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="137216d7-4ffc-4759-92bc-9e49898ed35b" absoluteBounds="3.75, 0.5, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/DataClassesGasStationsDataContext/VW_GasStation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23ce9129-543d-4307-bfd4-89b2a44fcf2a" absoluteBounds="3.7649999999999997, 0.96, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

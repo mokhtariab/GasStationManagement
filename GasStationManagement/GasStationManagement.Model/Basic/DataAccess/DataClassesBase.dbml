@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_Monitoring" Member="TBL_Monitorings">
+    <Type Name="TBL_Monitoring">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_CounterInsLoc" Member="TBL_CounterInsLocs">
+    <Type Name="TBL_CounterInsLoc">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_GasStationType" Member="TBL_GasStationTypes">
+    <Type Name="TBL_GasStationType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_WorkingPressure" Member="TBL_WorkingPressures">
+    <Type Name="TBL_WorkingPressure">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_ZoneOperation" Member="TBL_ZoneOperations">
+    <Type Name="TBL_ZoneOperation">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_UseType" Member="TBL_UseTypes">
+    <Type Name="TBL_UseType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_MonitoringSysState" Member="TBL_MonitoringSysStates">
+    <Type Name="TBL_MonitoringSysState">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Line" Member="TBL_Lines">
+    <Type Name="TBL_Line">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ZoneOperation_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Store" Member="TBL_Stores">
+    <Type Name="TBL_Store">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_WorkShop" Member="TBL_WorkShops">
+    <Type Name="TBL_WorkShop">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Calibration" Member="TBL_Calibrations">
+    <Type Name="TBL_Calibration">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_TemperatureGage" Member="TBL_TemperatureGages">
+    <Type Name="TBL_TemperatureGage">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GageSize" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PacketLength" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TMin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_TemperatureTransmitter" Member="TBL_TemperatureTransmitters">
+    <Type Name="TBL_TemperatureTransmitter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HMIState" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PacketLength" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SensorType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TMax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_TemperatureSensor" Member="TBL_TemperatureSensors">
+    <Type Name="TBL_TemperatureSensor">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SensorType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="WireCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PacketLength" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TMax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Counter" Member="TBL_Counters">
+    <Type Name="TBL_Counter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Size" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Grate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EVCD" Member="TBL_EVCDs">
+    <Type Name="TBL_EVCD">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PMin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EquipmentState" Member="TBL_EquipmentStates">
+    <Type Name="TBL_EquipmentState">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Supplier" Member="TBL_Suppliers">
+    <Type Name="TBL_Supplier">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_LocationState" Member="TBL_LocationStates">
+    <Type Name="TBL_LocationState">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_PressureGage" Member="TBL_PressureGages">
+    <Type Name="TBL_PressureGage">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GageSize" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_PressureTransmitter" Member="TBL_PressureTransmitters">
+    <Type Name="TBL_PressureTransmitter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HMIState" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_Line" Member="VW_Lines">
+    <Type Name="VW_Line">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ZoneOperation_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ZoneOperationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_StationLinkType" Member="TBL_StationLinkTypes">
+    <Type Name="TBL_StationLinkType">
+      <Column Name="Id" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Parameters" Member="TBL_Parameters">
+    <Type Name="TBL_Parameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_TSample" Member="Table_TSamples">
+    <Type Name="Table_TSample">
+      <Column Name="time_Stamp" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="strTimeStampShamsi" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="bInvalid" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="nProjectID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="fSysUpTime_Hour" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="nSourceID_OfResetPAC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bResetPAC_Pend" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fStationCapacity" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fTotalQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="fInGasT" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fOutGasT" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fInGasP" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fOutGasP" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fAirT" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="EK1_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK1_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK1_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK2_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK2_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK2_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EK3_nVb" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVbD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_nVmD" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EK3_fP_Psi" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fT" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fC" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQm" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fQb" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fTbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_fPbX" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="EK3_nBatRemain" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fInT_Ht1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fOutT_Ht1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="bWaterLLA_Ht1" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fInT_Ht2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fOutT_Ht2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="fWaterT_Ht2" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="bWaterLLA_Ht2" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fWaterT_Ht1" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_MonitoringDelete" Method="SP_MonitoringDelete">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MonitoringInsert" Method="SP_MonitoringInsert">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Size" Parameter="size" Type="System.Double" DbType="Float" />
+    <Parameter Name="Class" Parameter="class" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Grate" Parameter="grate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MonitoringUpdate" Method="SP_MonitoringUpdate">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Size" Parameter="size" Type="System.Double" DbType="Float" />
+    <Parameter Name="Class" Parameter="class" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Grate" Parameter="grate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterInsLocDelete" Method="SP_CounterInsLocDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterInsLocUpdate" Method="SP_CounterInsLocUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterInsLocInsert" Method="SP_CounterInsLocInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationTypeDelete" Method="SP_GasStationTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationTypeUpdate" Method="SP_GasStationTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationTypeInsert" Method="SP_GasStationTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationLinkTypeDelete" Method="SP_StationLinkTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UseTypeDelete" Method="SP_UseTypeDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UseTypeUpdate" Method="SP_UseTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_UseTypeInsert" Method="SP_UseTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ZoneOperationDelete" Method="SP_ZoneOperationDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ZoneOperationUpdate" Method="SP_ZoneOperationUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ZoneOperationInsert" Method="SP_ZoneOperationInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MonitoringSysStateDelete" Method="SP_MonitoringSysStateDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MonitoringSysStateUpdate" Method="SP_MonitoringSysStateUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MonitoringSysStateInsert" Method="SP_MonitoringSysStateInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LineDelete" Method="SP_LineDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LineUpdate" Method="SP_LineUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ZoneOperation_Id" Parameter="zoneOperation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LineInsert" Method="SP_LineInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ZoneOperation_Id" Parameter="zoneOperation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StoreDelete" Method="SP_StoreDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StoreUpdate" Method="SP_StoreUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StoreInsert" Method="SP_StoreInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SupplierDelete" Method="SP_SupplierDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SupplierUpdate" Method="SP_SupplierUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="Tel" Parameter="tel" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_SupplierInsert" Method="SP_SupplierInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="Tel" Parameter="tel" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CalibrationDelete" Method="SP_CalibrationDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CalibrationUpdate" Method="SP_CalibrationUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CalibrationInsert" Method="SP_CalibrationInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterDelete" Method="SP_CounterDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterInsert" Method="SP_CounterInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Size" Parameter="size" Type="System.Double" DbType="Float" />
+    <Parameter Name="Class" Parameter="class" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Grate" Parameter="grate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CounterUpdate" Method="SP_CounterUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Size" Parameter="size" Type="System.Double" DbType="Float" />
+    <Parameter Name="Class" Parameter="class" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Grate" Parameter="grate" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EVCDDelete" Method="SP_EVCDDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EVCDInsert" Method="SP_EVCDInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PMin" Parameter="pMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EVCDUpdate" Method="SP_EVCDUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PMin" Parameter="pMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationStateDelete" Method="SP_LocationStateDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationStateInsert" Method="SP_LocationStateInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LocationStateUpdate" Method="SP_LocationStateUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureGageDelete" Method="SP_PressureGageDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureGageInsert" Method="SP_PressureGageInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GageSize" Parameter="gageSize" Type="System.Double" DbType="Float" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureGageUpdate" Method="SP_PressureGageUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GageSize" Parameter="gageSize" Type="System.Double" DbType="Float" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureTransmitterDelete" Method="SP_PressureTransmitterDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureTransmitterInsert" Method="SP_PressureTransmitterInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HMIState" Parameter="hMIState" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressureTransmitterUpdate" Method="SP_PressureTransmitterUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HMIState" Parameter="hMIState" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PMax" Parameter="pMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureGageDelete" Method="SP_TemperatureGageDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureGageInsert" Method="SP_TemperatureGageInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GageSize" Parameter="gageSize" Type="System.Double" DbType="Float" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureGageUpdate" Method="SP_TemperatureGageUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GageSize" Parameter="gageSize" Type="System.Double" DbType="Float" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureSensorDelete" Method="SP_TemperatureSensorDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureSensorInsert" Method="SP_TemperatureSensorInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SensorType" Parameter="sensorType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="WireCount" Parameter="wireCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureSensorUpdate" Method="SP_TemperatureSensorUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SensorType" Parameter="sensorType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="WireCount" Parameter="wireCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureTransmitterDelete" Method="SP_TemperatureTransmitterDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureTransmitterInsert" Method="SP_TemperatureTransmitterInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HMIState" Parameter="hMIState" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="SensorType" Parameter="sensorType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemperatureTransmitterUpdate" Method="SP_TemperatureTransmitterUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Model" Parameter="model" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Brand" Parameter="brand" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HMIState" Parameter="hMIState" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PacketLength" Parameter="packetLength" Type="System.Double" DbType="Float" />
+    <Parameter Name="SensorType" Parameter="sensorType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TMin" Parameter="tMin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TMax" Parameter="tMax" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CalibrationDuration" Parameter="calibrationDuration" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkingPressureDelete" Method="SP_WorkingPressureDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkingPressureInsert" Method="SP_WorkingPressureInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkingPressureUpdate" Method="SP_WorkingPressureUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkShopDelete" Method="SP_WorkShopDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkShopInsert" Method="SP_WorkShopInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_WorkShopUpdate" Method="SP_WorkShopUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EquipmentStateDelete" Method="SP_EquipmentStateDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EquipmentStateInsert" Method="SP_EquipmentStateInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EquipmentStateUpdate" Method="SP_EquipmentStateUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationLinkTypeInsert" Method="SP_StationLinkTypeInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationLinkTypeUpdate" Method="SP_StationLinkTypeUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ParametersDelete" Method="SP_ParametersDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ParametersInsert" Method="SP_ParametersInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ParametersUpdate" Method="SP_ParametersUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

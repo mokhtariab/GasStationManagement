@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52CEEA8F-B059-4612-B20B-36FF3D768795}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasStationManagement.View</RootNamespace>
+    <AssemblyName>GasStationManagement.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid">
+      <HintPath>..\..\Output\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\..\Output\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.SuperGrid.Design">
+      <HintPath>..\..\Output\DevComponents.SuperGrid.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX">
+      <HintPath>..\..\Output\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Data.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v4">
+      <HintPath>..\..\Output\Janus.Windows.ButtonBar.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v4">
+      <HintPath>..\..\Output\Janus.Windows.CalendarCombo.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Common.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v4">
+      <HintPath>..\..\Output\Janus.Windows.ExplorerBar.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.GridEX.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v4, Version=4.0.40.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\Janus.Windows.Ribbon.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v4">
+      <HintPath>..\..\Output\Janus.Windows.Schedule.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v4">
+      <HintPath>..\..\Output\Janus.Windows.TimeLine.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v4">
+      <HintPath>..\..\Output\Janus.Windows.UI.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="KagNetComponents2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=077033ba788eab41, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\KagNetComponents2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Output\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MSS.Output\Common\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MSS.Output\Common\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl, Version=1.4.0.968, Culture=neutral, PublicKeyToken=04c10344d6495b18, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForms\ParametersAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\ParametersAdd_Frm.designer.cs">
+      <DependentUpon>ParametersAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Parameters_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Parameters_Frm.designer.cs">
+      <DependentUpon>Parameters_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\CounterInsLoc_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\CounterInsLoc_Frm.designer.cs">
+      <DependentUpon>CounterInsLoc_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\SuppliersAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\SuppliersAdd_Frm.designer.cs">
+      <DependentUpon>SuppliersAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Suppliers_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Suppliers_Frm.designer.cs">
+      <DependentUpon>Suppliers_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\AllCounter_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\AllCounter_UC.Designer.cs">
+      <DependentUpon>AllCounter_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterStateAdd_Frm.designer.cs">
+      <DependentUpon>CounterStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterAdd_Frm.designer.cs">
+      <DependentUpon>CounterAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\LineAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\LineAdd_Frm.designer.cs">
+      <DependentUpon>LineAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Line_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Line_Frm.designer.cs">
+      <DependentUpon>Line_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\ZoneOperationAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\ZoneOperationAdd_Frm.designer.cs">
+      <DependentUpon>ZoneOperationAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\ZoneOperation_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\ZoneOperation_Frm.designer.cs">
+      <DependentUpon>ZoneOperation_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\MonitoringSysStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\MonitoringSysStateAdd_Frm.designer.cs">
+      <DependentUpon>MonitoringSysStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\MonitoringSysState_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\MonitoringSysState_Frm.designer.cs">
+      <DependentUpon>MonitoringSysState_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\UseTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\UseTypeAdd_Frm.designer.cs">
+      <DependentUpon>UseTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\UseType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\UseType_Frm.designer.cs">
+      <DependentUpon>UseType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\StationLinkTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\StationLinkTypeAdd_Frm.designer.cs">
+      <DependentUpon>StationLinkTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\StationLinkType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\StationLinkType_Frm.designer.cs">
+      <DependentUpon>StationLinkType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\WorkingPressureAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\WorkingPressureAdd_Frm.designer.cs">
+      <DependentUpon>WorkingPressureAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\WorkingPressure_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\WorkingPressure_Frm.designer.cs">
+      <DependentUpon>WorkingPressure_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\CounterInsLocAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\CounterInsLocAdd_Frm.designer.cs">
+      <DependentUpon>CounterInsLocAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\GasStationTypeAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\GasStationTypeAdd_Frm.designer.cs">
+      <DependentUpon>GasStationTypeAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\GasStationType_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\GasStationType_Frm.designer.cs">
+      <DependentUpon>GasStationType_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\WorkShopAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\WorkShopAdd_Frm.designer.cs">
+      <DependentUpon>WorkShopAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\WorkShop_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\WorkShop_Frm.designer.cs">
+      <DependentUpon>WorkShop_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\LocationStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\LocationStateAdd_Frm.designer.cs">
+      <DependentUpon>LocationStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\StoreAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\StoreAdd_Frm.designer.cs">
+      <DependentUpon>StoreAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\LocationState_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\LocationState_Frm.designer.cs">
+      <DependentUpon>LocationState_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Store_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Store_Frm.designer.cs">
+      <DependentUpon>Store_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentStateAdd_Frm.designer.cs">
+      <DependentUpon>EquipmentStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\CalibrationAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\CalibrationAdd_Frm.designer.cs">
+      <DependentUpon>CalibrationAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentSate_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\EquipmentSate_Frm.designer.cs">
+      <DependentUpon>EquipmentSate_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForms\Calibration_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForms\Calibration_Frm.designer.cs">
+      <DependentUpon>Calibration_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\CounterState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\CounterState_UC.designer.cs">
+      <DependentUpon>CounterState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\Forms\CounterSupplyAdd_Frm.designer.cs">
+      <DependentUpon>CounterSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\CounterSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\CounterSupply_UC.designer.cs">
+      <DependentUpon>CounterSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\Counter_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Counter\UC\Counter_UC.designer.cs">
+      <DependentUpon>Counter_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDSupplyAdd_Frm.designer.cs">
+      <DependentUpon>EVCDSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDAdd_Frm.designer.cs">
+      <DependentUpon>EVCDAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\Forms\EVCDStateAdd_Frm.designer.cs">
+      <DependentUpon>EVCDStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\AllEVCD_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\AllEVCD_UC.Designer.cs">
+      <DependentUpon>AllEVCD_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCDState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCDState_UC.designer.cs">
+      <DependentUpon>EVCDState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCDSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCDSupply_UC.designer.cs">
+      <DependentUpon>EVCDSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCD_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\EVCD\UC\EVCD_UC.designer.cs">
+      <DependentUpon>EVCD_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\GasStation\Forms\GasStationAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\GasStation\Forms\GasStationAdd_Frm.designer.cs">
+      <DependentUpon>GasStationAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringStateAdd_Frm.designer.cs">
+      <DependentUpon>MonitoringStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringSupplyAdd_Frm.designer.cs">
+      <DependentUpon>MonitoringSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\Forms\MonitoringAdd_Frm.designer.cs">
+      <DependentUpon>MonitoringAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\MonitoringState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\MonitoringState_UC.designer.cs">
+      <DependentUpon>MonitoringState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\MonitoringSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\MonitoringSupply_UC.designer.cs">
+      <DependentUpon>MonitoringSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\Monitoring_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\Monitoring_UC.designer.cs">
+      <DependentUpon>Monitoring_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\Monitoring\UC\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageStateAdd_Frm.designer.cs">
+      <DependentUpon>PressGageStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageSupplyAdd_Frm.designer.cs">
+      <DependentUpon>PressGageSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\Forms\PressGageAdd_Frm.designer.cs">
+      <DependentUpon>PressGageAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\AllPressGage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\AllPressGage_UC.Designer.cs">
+      <DependentUpon>AllPressGage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGageState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGageState_UC.designer.cs">
+      <DependentUpon>PressGageState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGageSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGageSupply_UC.designer.cs">
+      <DependentUpon>PressGageSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressGage\UC\PressGage_UC.designer.cs">
+      <DependentUpon>PressGage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransStateAdd_Frm.designer.cs">
+      <DependentUpon>PressTransStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransAdd_Frm.designer.cs">
+      <DependentUpon>PressTransAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\Forms\PressTransSupplyAdd_Frm.designer.cs">
+      <DependentUpon>PressTransSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\AllPressTrans_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\AllPressTrans_UC.Designer.cs">
+      <DependentUpon>AllPressTrans_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTransState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTransState_UC.designer.cs">
+      <DependentUpon>PressTransState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTransSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTransSupply_UC.designer.cs">
+      <DependentUpon>PressTransSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTrans_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\PressTrans\UC\PressTrans_UC.designer.cs">
+      <DependentUpon>PressTrans_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\Forms\StationMonitoringStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\Forms\StationMonitoringStateAdd_Frm.designer.cs">
+      <DependentUpon>StationMonitoringStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\UC\StationMonitoringStateParameters_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\UC\StationMonitoringStateParameters_UC.designer.cs">
+      <DependentUpon>StationMonitoringStateParameters_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\UC\StationMonitoringState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\StationMonitoringState\UC\StationMonitoringState_UC.designer.cs">
+      <DependentUpon>StationMonitoringState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageStateAdd_Frm.designer.cs">
+      <DependentUpon>TemGageStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageSupplyAdd_Frm.designer.cs">
+      <DependentUpon>TemGageSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\Forms\TemGageAdd_Frm.designer.cs">
+      <DependentUpon>TemGageAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\AllTemGage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\AllTemGage_UC.Designer.cs">
+      <DependentUpon>AllTemGage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGageState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGageState_UC.designer.cs">
+      <DependentUpon>TemGageState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGageSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGageSupply_UC.designer.cs">
+      <DependentUpon>TemGageSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGage_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemGage\UC\TemGage_UC.designer.cs">
+      <DependentUpon>TemGage_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\TemperatureSensor\Forms\TemperatureSensorAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\TemperatureSensor\Forms\TemperatureSensorAdd_Frm.designer.cs">
+      <DependentUpon>TemperatureSensorAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\TemperatureSensor\UC\TemperatureSensor_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\Tmp~\TemperatureSensor\UC\TemperatureSensor_UC.designer.cs">
+      <DependentUpon>TemperatureSensor_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransStateAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransStateAdd_Frm.designer.cs">
+      <DependentUpon>TemTransStateAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransSupplyAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransSupplyAdd_Frm.designer.cs">
+      <DependentUpon>TemTransSupplyAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransAdd_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\Forms\TemTransAdd_Frm.designer.cs">
+      <DependentUpon>TemTransAdd_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\AllTemTrans_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\AllTemTrans_UC.Designer.cs">
+      <DependentUpon>AllTemTrans_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTransState_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTransState_UC.designer.cs">
+      <DependentUpon>TemTransState_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTransSupply_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTransSupply_UC.designer.cs">
+      <DependentUpon>TemTransSupply_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTrans_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\TemTrans\UC\TemTrans_UC.designer.cs">
+      <DependentUpon>TemTrans_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainStart_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainStart_Frm.Designer.cs">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\GasStation\UC\GasStation_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForms\GasStation\UC\GasStation_UC.Designer.cs">
+      <DependentUpon>GasStation_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemImport\Forms\PerformanceInfoStation_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemImport\Forms\PerformanceInfoStation_Frm.designer.cs">
+      <DependentUpon>PerformanceInfoStation_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemImport\Forms\PerformanceInfoDate_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemImport\Forms\PerformanceInfoDate_Frm.designer.cs">
+      <DependentUpon>PerformanceInfoDate_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemImport\UC\GasStationImport_Uc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemImport\UC\GasStationImport_Uc.designer.cs">
+      <DependentUpon>GasStationImport_Uc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemImport\Forms\SelectParameter_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemImport\Forms\SelectParameter_Frm.Designer.cs">
+      <DependentUpon>SelectParameter_Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemImport\Forms\SelectStation_Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemImport\Forms\SelectStation_Frm.Designer.cs">
+      <DependentUpon>SelectStation_Frm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForms\ParametersAdd_Frm.resx">
+      <DependentUpon>ParametersAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Parameters_Frm.resx">
+      <DependentUpon>Parameters_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\CounterInsLoc_Frm.resx">
+      <DependentUpon>CounterInsLoc_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\SuppliersAdd_Frm.resx">
+      <DependentUpon>SuppliersAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Suppliers_Frm.resx">
+      <DependentUpon>Suppliers_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\Forms\CounterStateAdd_Frm.resx">
+      <DependentUpon>CounterStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\Forms\CounterAdd_Frm.resx">
+      <DependentUpon>CounterAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\LineAdd_Frm.resx">
+      <DependentUpon>LineAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Line_Frm.resx">
+      <DependentUpon>Line_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\ZoneOperationAdd_Frm.resx">
+      <DependentUpon>ZoneOperationAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\ZoneOperation_Frm.resx">
+      <DependentUpon>ZoneOperation_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\MonitoringSysStateAdd_Frm.resx">
+      <DependentUpon>MonitoringSysStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\MonitoringSysState_Frm.resx">
+      <DependentUpon>MonitoringSysState_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\UseTypeAdd_Frm.resx">
+      <DependentUpon>UseTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\UseType_Frm.resx">
+      <DependentUpon>UseType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\StationLinkTypeAdd_Frm.resx">
+      <DependentUpon>StationLinkTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\StationLinkType_Frm.resx">
+      <DependentUpon>StationLinkType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\WorkingPressureAdd_Frm.resx">
+      <DependentUpon>WorkingPressureAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\WorkingPressure_Frm.resx">
+      <DependentUpon>WorkingPressure_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\CounterInsLocAdd_Frm.resx">
+      <DependentUpon>CounterInsLocAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\GasStationTypeAdd_Frm.resx">
+      <DependentUpon>GasStationTypeAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\GasStationType_Frm.resx">
+      <DependentUpon>GasStationType_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\WorkShopAdd_Frm.resx">
+      <DependentUpon>WorkShopAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\WorkShop_Frm.resx">
+      <DependentUpon>WorkShop_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\LocationStateAdd_Frm.resx">
+      <DependentUpon>LocationStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\StoreAdd_Frm.resx">
+      <DependentUpon>StoreAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\LocationState_Frm.resx">
+      <DependentUpon>LocationState_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Store_Frm.resx">
+      <DependentUpon>Store_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\EquipmentStateAdd_Frm.resx">
+      <DependentUpon>EquipmentStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\CalibrationAdd_Frm.resx">
+      <DependentUpon>CalibrationAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\EquipmentSate_Frm.resx">
+      <DependentUpon>EquipmentSate_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForms\Calibration_Frm.resx">
+      <DependentUpon>Calibration_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\UC\AllCounter_UC.resx">
+      <DependentUpon>AllCounter_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\UC\CounterState_UC.resx">
+      <DependentUpon>CounterState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\Forms\CounterSupplyAdd_Frm.resx">
+      <DependentUpon>CounterSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\UC\CounterSupply_UC.resx">
+      <DependentUpon>CounterSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Counter\UC\Counter_UC.resx">
+      <DependentUpon>Counter_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\Forms\EVCDSupplyAdd_Frm.resx">
+      <DependentUpon>EVCDSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\Forms\EVCDAdd_Frm.resx">
+      <DependentUpon>EVCDAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\Forms\EVCDStateAdd_Frm.resx">
+      <DependentUpon>EVCDStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\UC\AllEVCD_UC.resx">
+      <DependentUpon>AllEVCD_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\UC\EVCDState_UC.resx">
+      <DependentUpon>EVCDState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\UC\EVCDSupply_UC.resx">
+      <DependentUpon>EVCDSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\EVCD\UC\EVCD_UC.resx">
+      <DependentUpon>EVCD_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\GasStation\Forms\GasStationAdd_Frm.resx">
+      <DependentUpon>GasStationAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\Forms\MonitoringStateAdd_Frm.resx">
+      <DependentUpon>MonitoringStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\Forms\MonitoringSupplyAdd_Frm.resx">
+      <DependentUpon>MonitoringSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\Forms\MonitoringAdd_Frm.resx">
+      <DependentUpon>MonitoringAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\UC\MonitoringState_UC.resx">
+      <DependentUpon>MonitoringState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\UC\MonitoringSupply_UC.resx">
+      <DependentUpon>MonitoringSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\UC\Monitoring_UC.resx">
+      <DependentUpon>Monitoring_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\Monitoring\UC\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\Forms\PressGageStateAdd_Frm.resx">
+      <DependentUpon>PressGageStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\Forms\PressGageSupplyAdd_Frm.resx">
+      <DependentUpon>PressGageSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\Forms\PressGageAdd_Frm.resx">
+      <DependentUpon>PressGageAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\UC\AllPressGage_UC.resx">
+      <DependentUpon>AllPressGage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\UC\PressGageState_UC.resx">
+      <DependentUpon>PressGageState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\UC\PressGageSupply_UC.resx">
+      <DependentUpon>PressGageSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressGage\UC\PressGage_UC.resx">
+      <DependentUpon>PressGage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\Forms\PressTransStateAdd_Frm.resx">
+      <DependentUpon>PressTransStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\Forms\PressTransAdd_Frm.resx">
+      <DependentUpon>PressTransAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\Forms\PressTransSupplyAdd_Frm.resx">
+      <DependentUpon>PressTransSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\UC\AllPressTrans_UC.resx">
+      <DependentUpon>AllPressTrans_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\UC\PressTransState_UC.resx">
+      <DependentUpon>PressTransState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\UC\PressTransSupply_UC.resx">
+      <DependentUpon>PressTransSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\PressTrans\UC\PressTrans_UC.resx">
+      <DependentUpon>PressTrans_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\StationMonitoringState\Forms\StationMonitoringStateAdd_Frm.resx">
+      <DependentUpon>StationMonitoringStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\StationMonitoringState\UC\StationMonitoringStateParameters_UC.resx">
+      <DependentUpon>StationMonitoringStateParameters_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\StationMonitoringState\UC\StationMonitoringState_UC.resx">
+      <DependentUpon>StationMonitoringState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\Forms\TemGageStateAdd_Frm.resx">
+      <DependentUpon>TemGageStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\Forms\TemGageSupplyAdd_Frm.resx">
+      <DependentUpon>TemGageSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\Forms\TemGageAdd_Frm.resx">
+      <DependentUpon>TemGageAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\UC\AllTemGage_UC.resx">
+      <DependentUpon>AllTemGage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\UC\TemGageState_UC.resx">
+      <DependentUpon>TemGageState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\UC\TemGageSupply_UC.resx">
+      <DependentUpon>TemGageSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemGage\UC\TemGage_UC.resx">
+      <DependentUpon>TemGage_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\TemperatureSensor\Forms\TemperatureSensorAdd_Frm.resx">
+      <DependentUpon>TemperatureSensorAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Tmp~\TemperatureSensor\UC\TemperatureSensor_UC.resx">
+      <DependentUpon>TemperatureSensor_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\Forms\TemTransStateAdd_Frm.resx">
+      <DependentUpon>TemTransStateAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\Forms\TemTransSupplyAdd_Frm.resx">
+      <DependentUpon>TemTransSupplyAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\Forms\TemTransAdd_Frm.resx">
+      <DependentUpon>TemTransAdd_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\UC\AllTemTrans_UC.resx">
+      <DependentUpon>AllTemTrans_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\UC\TemTransState_UC.resx">
+      <DependentUpon>TemTransState_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\UC\TemTransSupply_UC.resx">
+      <DependentUpon>TemTransSupply_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TemTrans\UC\TemTrans_UC.resx">
+      <DependentUpon>TemTrans_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainStart_Frm.resx">
+      <DependentUpon>MainStart_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\GasStation\UC\GasStation_UC.resx">
+      <DependentUpon>GasStation_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemImport\Forms\PerformanceInfoStation_Frm.resx">
+      <DependentUpon>PerformanceInfoStation_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemImport\Forms\PerformanceInfoDate_Frm.resx">
+      <DependentUpon>PerformanceInfoDate_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemImport\UC\GasStationImport_Uc.resx">
+      <DependentUpon>GasStationImport_Uc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemImport\Forms\SelectParameter_Frm.resx">
+      <DependentUpon>SelectParameter_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemImport\Forms\SelectStation_Frm.resx">
+      <DependentUpon>SelectStation_Frm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\GasStationManagement.Model.GasStation.GasStation.datasource" />
+    <None Include="Properties\DataSources\GasStationManagement.Model.Table_TSample.Table_TSample.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MSS.Library\MSS.Library\MSS.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MSS.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GasStationManagement.Model\GasStationManagement.Model.csproj">
+      <Project>{6f89cfd7-8d34-497a-a5cc-e7a1b7f62e7c}</Project>
+      <Name>GasStationManagement.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GasStationManagement.ViewModel\GasStationManagement.ViewModel.csproj">
+      <Project>{46b2fa4a-0f9f-4532-af2d-70960d6d1631}</Project>
+      <Name>GasStationManagement.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

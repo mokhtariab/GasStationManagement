@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46B2FA4A-0F9F-4532-AF2D-70960D6D1631}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasStationManagement.ViewModel</RootNamespace>
+    <AssemblyName>GasStationManagement.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Table_TSample\Table_TSample.cs" />
+    <Compile Include="Basic\Parameters.cs" />
+    <Compile Include="Basic\UseType.cs" />
+    <Compile Include="Basic\Calibration.cs" />
+    <Compile Include="Basic\Line.cs" />
+    <Compile Include="Basic\ZoneOperation.cs" />
+    <Compile Include="Basic\MonitoringSysState.cs" />
+    <Compile Include="Basic\StationLinkType.cs" />
+    <Compile Include="Basic\WorkingPressure.cs" />
+    <Compile Include="Basic\CounterInsLoc.cs" />
+    <Compile Include="Basic\GasStationType.cs" />
+    <Compile Include="Basic\Suppliers.cs" />
+    <Compile Include="Basic\WorkShop.cs" />
+    <Compile Include="Basic\LocationState.cs" />
+    <Compile Include="Basic\Store.cs" />
+    <Compile Include="Basic\EquipmentState.cs" />
+    <Compile Include="Basic\Monitoring.cs" />
+    <Compile Include="Basic\TemperatureSensor.cs" />
+    <Compile Include="Basic\TemperatureTransmitter.cs" />
+    <Compile Include="Basic\PressureTransmitter.cs" />
+    <Compile Include="Basic\TemperatureGage.cs" />
+    <Compile Include="Basic\PressureGage.cs" />
+    <Compile Include="Basic\EVCD.cs" />
+    <Compile Include="Basic\Counter.cs" />
+    <Compile Include="GasStationClass\GasStationClass.cs" />
+    <Compile Include="MonitoringState\MonitoringState.cs" />
+    <Compile Include="EVCDSupply\EVCDSupply.cs" />
+    <Compile Include="EVCDState\EVCDState.cs" />
+    <Compile Include="CounterSupply\CounterSupply.cs" />
+    <Compile Include="CounterState\CounterState.cs" />
+    <Compile Include="MonitoringSupply\MonitoringSupply.cs" />
+    <Compile Include="PressGageState\PressGageState.cs" />
+    <Compile Include="PressGageSupply\PressGageSupply.cs" />
+    <Compile Include="PressTransState\PressTransState.cs" />
+    <Compile Include="PressTransSupply\PressTransSupply.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StationMonitoringStateParameters\StationMonitoringState.cs" />
+    <Compile Include="StationMonitoringState\StationMonitoringState.cs" />
+    <Compile Include="TemGageState\TemGageState.cs" />
+    <Compile Include="TemGageSupply\TemGageSupply.cs" />
+    <Compile Include="TemTransState\TemTransState.cs" />
+    <Compile Include="TemTransSupply\TemTransSupply.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MSS.Library\MSS.Library\MSS.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MSS.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GasStationManagement.Model\GasStationManagement.Model.csproj">
+      <Project>{6f89cfd7-8d34-497a-a5cc-e7a1b7f62e7c}</Project>
+      <Name>GasStationManagement.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

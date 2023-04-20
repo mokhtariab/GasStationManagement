@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesEVCDSupplyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_EVCDSupply" Member="TBL_EVCDSupplies">
+    <Type Name="TBL_EVCDSupply">
+      <Column Name="EVCD_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EVCDSerialNo" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SupplyDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="InitialVm" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TEVCDSerialNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PEVCDSerialNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_EVCDSupply" Member="VW_EVCDSupplies">
+    <Type Name="VW_EVCDSupply">
+      <Column Name="EVCD_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EVCDSerialNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplyDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="InitialVm" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TEVCDSerialNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PEVCDSerialNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_EVCDSupplyDelete" Method="SP_EVCDSupplyDelete">
+    <Parameter Name="EVCD_Id" Parameter="eVCD_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EVCDSerialNo" Parameter="eVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EVCDSupplyInsert" Method="SP_EVCDSupplyInsert">
+    <Parameter Name="EVCD_Id" Parameter="eVCD_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EVCDSerialNo" Parameter="eVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SupplyDate" Parameter="supplyDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="InitialVm" Parameter="initialVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TEVCDSerialNo" Parameter="tEVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PEVCDSerialNo" Parameter="pEVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_EVCDSupplyUpdate" Method="SP_EVCDSupplyUpdate">
+    <Parameter Name="EVCD_Id" Parameter="eVCD_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EVCDSerialNo" Parameter="eVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SupplyDate" Parameter="supplyDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="InitialVm" Parameter="initialVm" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TEVCDSerialNo" Parameter="tEVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PEVCDSerialNo" Parameter="pEVCDSerialNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

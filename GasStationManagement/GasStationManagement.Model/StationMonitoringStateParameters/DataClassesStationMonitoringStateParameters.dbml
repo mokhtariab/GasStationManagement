@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesStationMonitoringStateParametersDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VW_StationMonitoringStateParameters" Member="VW_StationMonitoringStateParameters">
+    <Type Name="VW_StationMonitoringStateParameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StationMonitoringState_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Parameters_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="MonitoringSysExeDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeStateDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationBuildingDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleRegInfoStr" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ScheduleRegInfo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleSpecPeriod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RanFew" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Heater_Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GasStationTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkingPressureName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UseTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LineName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StationLinkTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SupplierTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParametersName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_StationMonitoringStateParameters" Member="TBL_StationMonitoringStateParameters">
+    <Type Name="TBL_StationMonitoringStateParameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StationMonitoringState_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Parameters_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_StationMonitoringStateParametersDelete" Method="SP_StationMonitoringStateParametersDelete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationMonitoringStateParametersInsert" Method="SP_StationMonitoringStateParametersInsert">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="StationMonitoringState_Id" Parameter="stationMonitoringState_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Parameters_Id" Parameter="parameters_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationMonitoringStateParametersUpdate" Method="SP_StationMonitoringStateParametersUpdate">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StationMonitoringState_Id" Parameter="stationMonitoringState_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Parameters_Id" Parameter="parameters_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(1000)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_StationMonitoringStateParametersDeleteWithSMSId" Method="SP_StationMonitoringStateParametersDeleteWithSMSId">
+    <Parameter Name="StationMonitoringState_Id" Parameter="stationMonitoringState_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

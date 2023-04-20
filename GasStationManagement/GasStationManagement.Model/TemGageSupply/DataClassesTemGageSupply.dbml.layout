@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesTemGageSupply">
+  <DataContextMoniker Name="/DataClassesTemGageSupplyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3eaf8658-5dca-4cd9-8933-a37471661b18" absoluteBounds="0.5, 1, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesTemGageSupplyDataContext/TBL_TemGageSupply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c19846d-1a41-4857-bfb3-0e746bb99994" absoluteBounds="0.51500000000000012, 1.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="61819623-b921-4b33-8e64-fc53ef7cf3eb" absoluteBounds="3, 1.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/DataClassesTemGageSupplyDataContext/VW_TemGageSupply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc08e7b2-1b5a-4049-9920-f6768dadd5aa" absoluteBounds="3.015, 2.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

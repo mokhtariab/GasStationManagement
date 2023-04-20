@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesCounterState">
+  <DataContextMoniker Name="/DataClassesCounterStateDataContext" />
+  <nestedChildShapes>
+    <classShape Id="51649add-4c2d-498a-a8f3-19d9c46f1371" absoluteBounds="0.5, 0.75, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DataClassesCounterStateDataContext/TBL_CounterState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e04774c-1311-4c86-b718-a05d993e150e" absoluteBounds="0.51500000000000012, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="010dff32-8c85-4be2-aa5d-54960f9da7dc" absoluteBounds="2.875, 1.75, 2, 5.0400211588541657">
+      <DataClassMoniker Name="/DataClassesCounterStateDataContext/VW_CounterState" />
+      <nestedChildShapes>
+        <elementListCompartment Id="616ab7dc-a954-47a3-affb-7a36443dc74c" absoluteBounds="2.89, 2.21, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

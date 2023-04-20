@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesGasStationsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GasStations" Member="GasStations">
+    <Type Name="GasStation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationBuildingDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="WorkingPressure_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UseType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleRegInfo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleSpecPeriod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Line_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GasStation_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RanFew" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Heater_Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CounterInsLoc_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CorrectionFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StationLinkType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MonitoringSysState_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MonitoringSysExeDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_GasStations" Member="VW_GasStations">
+    <Type Name="VW_GasStation">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationBuildingDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="WorkingPressure_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="UseType_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleRegInfoStr" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ScheduleRegInfo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ScheduleSpecPeriod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Line_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GasStation_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RanFew" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Heater_Few" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CorrectionFactor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StationLinkType_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MonitoringSysState_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MonitoringSysExeDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkingPressureName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UseTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LineName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CounterInsLocName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StationLinkTypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MonitoringSysStateName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SupplierName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SupplierAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SupplierTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GasStationsOtherCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GasStationsOtherName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CounterInsLoc_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_GasStationCreateTable" Method="SP_GasStationCreateTable">
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationsDelete" Method="SP_GasStationsDelete">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationsInsert" Method="SP_GasStationsInsert">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="GasStationName" Parameter="gasStationName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="GasStationBuildingDate" Parameter="gasStationBuildingDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Capacity" Parameter="capacity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationType_Id" Parameter="gasStationType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkingPressure_Id" Parameter="workingPressure_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="UseType_Id" Parameter="useType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="ScheduleRegInfo" Parameter="scheduleRegInfo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="ScheduleSpecPeriod" Parameter="scheduleSpecPeriod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Line_Id" Parameter="line_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RanFew" Parameter="ranFew" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Heater_Few" Parameter="heater_Few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CounterInsLoc_Id" Parameter="counterInsLoc_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="CorrectionFactor" Parameter="correctionFactor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StationLinkType_Id" Parameter="stationLinkType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="MonitoringSysState_Id" Parameter="monitoringSysState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="MonitoringSysExeDate" Parameter="monitoringSysExeDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_GasStationsUpdate" Method="SP_GasStationsUpdate">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationCode" Parameter="gasStationCode" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="GasStationName" Parameter="gasStationName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="GasStationBuildingDate" Parameter="gasStationBuildingDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Capacity" Parameter="capacity" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GasStationType_Id" Parameter="gasStationType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkingPressure_Id" Parameter="workingPressure_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="UseType_Id" Parameter="useType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="ScheduleRegInfo" Parameter="scheduleRegInfo" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="ScheduleSpecPeriod" Parameter="scheduleSpecPeriod" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Line_Id" Parameter="line_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RanFew" Parameter="ranFew" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Heater_Few" Parameter="heater_Few" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CounterInsLoc_Id" Parameter="counterInsLoc_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="CorrectionFactor" Parameter="correctionFactor" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StationLinkType_Id" Parameter="stationLinkType_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="MonitoringSysState_Id" Parameter="monitoringSysState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="MonitoringSysExeDate" Parameter="monitoringSysExeDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

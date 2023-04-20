@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesPressGageStateDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_PressGageState" Member="TBL_PressGageStates">
+    <Type Name="TBL_PressGageState">
+      <Column Name="PressGage_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PressGageSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PressGageStateRow" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ChangeStateDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentState_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Store_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="WorkShop_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Calibration_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="GasStation_Id" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_PressGageState" Member="VW_PressGageStates">
+    <Type Name="VW_PressGageState">
+      <Column Name="PressGage_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PressGageSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PressGageStateRow" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ChangeStateDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentState_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="EquipmentStateName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Store_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="StoreName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkShop_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="WorkShopName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Calibration_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStation_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationCode" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="GasStationName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GageSize" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PMax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_PressGageStateDelete" Method="SP_PressGageStateDelete">
+    <Parameter Name="PressGage_Id" Parameter="pressGage_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressGageSerialNo" Parameter="pressGageSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressGageStateRow" Parameter="pressGageStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressGageStateInsert" Method="SP_PressGageStateInsert">
+    <Parameter Name="PressGage_Id" Parameter="pressGage_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressGageSerialNo" Parameter="pressGageSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressGageStateRow" Parameter="pressGageStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeStateDate" Parameter="changeStateDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EquipmentState_Id" Parameter="equipmentState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Store_Id" Parameter="store_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkShop_Id" Parameter="workShop_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Calibration_Id" Parameter="calibration_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_PressGageStateUpdate" Method="SP_PressGageStateUpdate">
+    <Parameter Name="PressGage_Id" Parameter="pressGage_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PressGageSerialNo" Parameter="pressGageSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PressGageStateRow" Parameter="pressGageStateRow" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ChangeStateDate" Parameter="changeStateDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="EquipmentState_Id" Parameter="equipmentState_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Store_Id" Parameter="store_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="WorkShop_Id" Parameter="workShop_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Calibration_Id" Parameter="calibration_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="GasStation_Id" Parameter="gasStation_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

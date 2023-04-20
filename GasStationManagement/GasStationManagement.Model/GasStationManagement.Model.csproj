@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F89CFD7-8D34-497A-A5CC-E7A1B7F62E7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GasStationManagement.Model</RootNamespace>
+    <AssemblyName>GasStationManagement.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basic\DataAccess\DataClassesBase.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesBase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\IClass\ICalibration.cs" />
+    <Compile Include="Basic\IClass\ISupplier.cs" />
+    <Compile Include="Basic\IClass\IWorkShop.cs" />
+    <Compile Include="Basic\IClass\ILocationState.cs" />
+    <Compile Include="Basic\IClass\IStore.cs" />
+    <Compile Include="Basic\IClass\IEquipmentState.cs" />
+    <Compile Include="Basic\IClass\ILine.cs" />
+    <Compile Include="Basic\IClass\IMonitoringSysState.cs" />
+    <Compile Include="Basic\IClass\IWorkingPressure.cs" />
+    <Compile Include="Basic\IClass\IParameter.cs" />
+    <Compile Include="Basic\IClass\IZoneOperation.cs" />
+    <Compile Include="Basic\IClass\IUseType.cs" />
+    <Compile Include="Basic\IClass\IStationLinkType.cs" />
+    <Compile Include="Basic\IClass\IGasStationType.cs" />
+    <Compile Include="Basic\IClass\ICounterInsLoc.cs" />
+    <Compile Include="Basic\IClass\IEVCD.cs" />
+    <Compile Include="Basic\IClass\ICounter.cs" />
+    <Compile Include="Basic\IClass\IPressureGage.cs" />
+    <Compile Include="Basic\IClass\IMonitoring.cs" />
+    <Compile Include="Basic\IClass\ITemperatureSensor.cs" />
+    <Compile Include="Basic\IClass\IPressureTransmitter.cs" />
+    <Compile Include="Basic\IClass\ITemperatureTransmitter.cs" />
+    <Compile Include="Basic\IClass\ITemperatureGage.cs" />
+    <Compile Include="CounterState\DataClassesCounterState.cs">
+      <DependentUpon>DataClassesCounterState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CounterSupply\DataClassesCounterSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesCounterSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVCDState\DataClassesEVCDState.cs">
+      <DependentUpon>DataClassesEVCDState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVCDState\DataClassesEVCDState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesEVCDState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVCDState\IEVCDState.cs" />
+    <Compile Include="EVCDSupply\DataClassesEVCDSupply.cs">
+      <DependentUpon>DataClassesEVCDSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVCDSupply\DataClassesEVCDSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesEVCDSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EVCDSupply\IEVCDSupply.cs" />
+    <Compile Include="CounterState\DataClassesCounterState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesCounterState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CounterState\ICounterState.cs" />
+    <Compile Include="CounterSupply\ICounterSupply.cs" />
+    <Compile Include="GasStation\DataClassesGasStations.cs">
+      <DependentUpon>DataClassesGasStations.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="GasStation\IGasStation.cs" />
+    <Compile Include="MonitoringState\DataClassesMonitoringState.cs">
+      <DependentUpon>DataClassesMonitoringState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringState\DataClassesMonitoringState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesMonitoringState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringState\IMonitoringState.cs" />
+    <Compile Include="MonitoringSupply\DataClassesMonitoringSupply.cs">
+      <DependentUpon>DataClassesMonitoringSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringSupply\DataClassesMonitoringSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesMonitoringSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringSupply\IMonitoringSupply.cs" />
+    <Compile Include="PressGageState\DataClassesPressGageState.cs">
+      <DependentUpon>DataClassesPressGageState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressGageState\DataClassesPressGageState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesPressGageState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressGageState\IPressGageState.cs" />
+    <Compile Include="PressGageSupply\DataClassesPressGageSupply.cs">
+      <DependentUpon>DataClassesPressGageSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressGageSupply\DataClassesPressGageSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesPressGageSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressGageSupply\IPressGageSupply.cs" />
+    <Compile Include="PressTransState\DataClassesPressTransState.cs">
+      <DependentUpon>DataClassesPressTransState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressTransState\DataClassesPressTransState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesPressTransState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressTransState\IPressTransState.cs" />
+    <Compile Include="PressTransSupply\DataClassesPressTransSupply.cs">
+      <DependentUpon>DataClassesPressTransSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressTransSupply\DataClassesPressTransSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesPressTransSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PressTransSupply\IPressTransSupply.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="GasStation\DataClassesGasStations.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesGasStations.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="StationMonitoringStateParameters\DataClassesStationMonitoringStateParameters.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesStationMonitoringStateParameters.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="StationMonitoringStateParameters\IStationMonitoringStateParameters.cs" />
+    <Compile Include="StationMonitoringState\DataClassesStationMonitoringState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesStationMonitoringState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="StationMonitoringState\IStationMonitoringState.cs" />
+    <Compile Include="Table_TSample\DataClassesTable_TSample.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesTable_TSample.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Table_TSample\ITable_TSample.cs" />
+    <Compile Include="TemGageState\DataClassesTemGageState.cs">
+      <DependentUpon>DataClassesTemGageState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemGageState\DataClassesTemGageState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesTemGageState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemGageState\ITemGageState.cs" />
+    <Compile Include="TemGageSupply\DataClassesTemGageSupply.cs">
+      <DependentUpon>DataClassesTemGageSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemGageSupply\DataClassesTemGageSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesTemGageSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemGageSupply\ITemGageSupply.cs" />
+    <Compile Include="TemTransState\DataClassesTemTransState.cs">
+      <DependentUpon>DataClassesTemTransState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemTransState\DataClassesTemTransState.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesTemTransState.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemTransState\ITemTransState.cs" />
+    <Compile Include="TemTransSupply\DataClassesTemTransSupply.cs">
+      <DependentUpon>DataClassesTemTransSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemTransSupply\DataClassesTemTransSupply.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesTemTransSupply.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TemTransSupply\ITemTransSupply.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Basic\DataAccess\DataClassesBase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesBase.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CounterState\DataClassesCounterState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesCounterState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CounterSupply\DataClassesCounterSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesCounterSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EVCDState\DataClassesEVCDState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesEVCDState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EVCDSupply\DataClassesEVCDSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesEVCDSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MonitoringState\DataClassesMonitoringState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesMonitoringState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MonitoringSupply\DataClassesMonitoringSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesMonitoringSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PressGageState\DataClassesPressGageState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesPressGageState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PressGageSupply\DataClassesPressGageSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesPressGageSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PressTransState\DataClassesPressTransState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesPressTransState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PressTransSupply\DataClassesPressTransSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesPressTransSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GasStation\DataClassesGasStations.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesGasStations.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StationMonitoringStateParameters\DataClassesStationMonitoringStateParameters.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesStationMonitoringStateParameters.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StationMonitoringState\DataClassesStationMonitoringState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesStationMonitoringState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Table_TSample\DataClassesTable_TSample.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesTable_TSample.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TemGageState\DataClassesTemGageState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesTemGageState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TemGageSupply\DataClassesTemGageSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesTemGageSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TemTransState\DataClassesTemTransState.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesTemTransState.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TemTransSupply\DataClassesTemTransSupply.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesTemTransSupply.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Basic\DataAccess\DataClassesBase.dbml.layout">
+      <DependentUpon>DataClassesBase.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GasStation\DataClassesGasStations.dbml.layout">
+      <DependentUpon>DataClassesGasStations.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CounterState\DataClassesCounterState.dbml.layout">
+      <DependentUpon>DataClassesCounterState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EVCDSupply\DataClassesEVCDSupply.dbml.layout">
+      <DependentUpon>DataClassesEVCDSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EVCDState\DataClassesEVCDState.dbml.layout">
+      <DependentUpon>DataClassesEVCDState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PressGageSupply\DataClassesPressGageSupply.dbml.layout">
+      <DependentUpon>DataClassesPressGageSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PressGageState\DataClassesPressGageState.dbml.layout">
+      <DependentUpon>DataClassesPressGageState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemGageSupply\DataClassesTemGageSupply.dbml.layout">
+      <DependentUpon>DataClassesTemGageSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemGageState\DataClassesTemGageState.dbml.layout">
+      <DependentUpon>DataClassesTemGageState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PressTransSupply\DataClassesPressTransSupply.dbml.layout">
+      <DependentUpon>DataClassesPressTransSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PressTransState\DataClassesPressTransState.dbml.layout">
+      <DependentUpon>DataClassesPressTransState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemTransSupply\DataClassesTemTransSupply.dbml.layout">
+      <DependentUpon>DataClassesTemTransSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemTransState\DataClassesTemTransState.dbml.layout">
+      <DependentUpon>DataClassesTemTransState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MonitoringSupply\DataClassesMonitoringSupply.dbml.layout">
+      <DependentUpon>DataClassesMonitoringSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MonitoringState\DataClassesMonitoringState.dbml.layout">
+      <DependentUpon>DataClassesMonitoringState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CounterSupply\DataClassesCounterSupply.dbml.layout">
+      <DependentUpon>DataClassesCounterSupply.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MSS.Library\MSS.Library\MSS.Library.csproj">
+      <Project>{5b5748b5-7246-443f-b5ef-8d2a34abc134}</Project>
+      <Name>MSS.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StationMonitoringState\DataClassesStationMonitoringState.dbml.layout">
+      <DependentUpon>DataClassesStationMonitoringState.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StationMonitoringStateParameters\DataClassesStationMonitoringStateParameters.dbml.layout">
+      <DependentUpon>DataClassesStationMonitoringStateParameters.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Table_TSample\DataClassesTable_TSample.dbml.layout">
+      <DependentUpon>DataClassesTable_TSample.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

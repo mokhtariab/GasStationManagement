@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GasStationManagement" Class="DataClassesTemTransSupplyDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=GasStationManagement;Integrated Security=True" SettingsObjectName="GasStationManagement.Model.Properties.Settings" SettingsPropertyName="GasStationManagementConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_TemTransSupply" Member="TBL_TemTransSupplies">
+    <Type Name="TBL_TemTransSupply">
+      <Column Name="TemTrans_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemTransSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SupplyDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_TemTransSupply" Member="VW_TemTransSupplies">
+    <Type Name="VW_TemTransSupply">
+      <Column Name="TemTrans_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TemTransSerialNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SupplyDate" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Suppliers_Id" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HMIState" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PacketLength" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SensorType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TMin" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TMax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CalibrationDuration" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_TemTransSupplyDelete" Method="SP_TemTransSupplyDelete">
+    <Parameter Name="TemTrans_Id" Parameter="temTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TemTransSerialNo" Parameter="temTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(2000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemTransSupplyInsert" Method="SP_TemTransSupplyInsert">
+    <Parameter Name="TemTrans_Id" Parameter="temTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TemTransSerialNo" Parameter="temTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="SupplyDate" Parameter="supplyDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_TemTransSupplyUpdate" Method="SP_TemTransSupplyUpdate">
+    <Parameter Name="TemTrans_Id" Parameter="temTrans_Id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TemTransSerialNo" Parameter="temTransSerialNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="SupplyDate" Parameter="supplyDate" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Suppliers_Id" Parameter="suppliers_Id" Type="System.Int16" DbType="SmallInt" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(4000)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="msgRet" Type="System.String" DbType="VarChar(1000)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
